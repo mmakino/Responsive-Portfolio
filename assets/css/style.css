@@ -110,7 +110,7 @@ aside img {
   float: left;
   width: 33%;
   margin: 3% 3% 3% 3%;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .portfolio-box img {
