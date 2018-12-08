@@ -1,10 +1,25 @@
-/*
-  CSS shared by 1)index.html, 2)portfolio.html, and 3)contact.html 
-*/
 
-* {
-  box-sizing: border-box;
-}
+/*
+-------------------------------------------------------------------------------------------
+*** SPECIFICATION ***
+
+== Color ==
+* Teal color (used for headings and backgrounds): #4aaaa5
+* Regular font color (used for paragraphs and all text besides the headings): #777777
+* Main header background color: #ffffff
+* Main header border color: #cccccc
+* Footer background color: #666666
+* Main content background color: #ffffff
+* Main content border color: #dddddd
+
+== Fonts ==
+* For heading fonts use font-family: 'Georgia', Times, Times New Roman, serif; .
+* For all other fonts use 'Arial', 'Helvetica Neue', Helvetica, sans-serif; .
+
+== Dimensions ==
+* The entire content and the main section content area is 960px wide.
+-------------------------------------------------------------------------------------------
+*/
 
 body {
   color: #777777;
@@ -43,27 +58,25 @@ header::after {
 
 /* Nav link items */
 nav {
+  /* display: inline; */
+  /* position: relative; */
   top: 0px;
   left: 150px;
   float: right;
   padding: 20px 0px 0px 0px;
   margin-right: 150px;
 }
-
 nav ul li {
   float: left;
   padding: 15px 0px 15px 20px;
 }
-
 nav ul li a:link {
   color: #777777;
   text-decoration: none;
 }
-
 nav ul li a:visited {
   color: #777777;
 }
-
 nav ul li a:hover {
   color: #4aaaa5;
   background-color: #ddd;
@@ -100,40 +113,151 @@ aside img {
 }
 
 /***** Portfolio Page *******/
-
-.portfolio {
-  min-height: calc(100vh - 70px);
-}
-
-.portfolio-box {
-  position: relative;
-  float: left;
-  width: 33%;
-  margin: 3% 3% 3% 3%;
-  /* overflow: auto; */
-}
-
-.portfolio-box img {
-  width: 100%;
-  height: auto;
-  border: 0 none;
-  opacity: 0.8;
-}
-
+/*
+now using bootstrap grid system
+*/
 .portfolio-caption {
-  position: absolute;
-  bottom: 12%;
-  width: 100%;
-  padding: 1em;
-  margin-bottom: 0;
-  font-weight: 300;
-  line-height: 1em;
+  position: relative;
+  top: -45px;
+  width: 20vw;
+  height: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #ffffff;
+  background-color: #4aaaa5;
   text-align: center;
-  background: #4aaaa5;
-  border-bottom: 0;
+  font-size: 1.0em;
+  margin: 0.5em 0em;
 }
 
+ .portfolio-img {
+  width: 20vw;
+  height: 25vh;
+} 
+
+@-webkit-keyframes dir1 {
+  0%   { left:0px; top:0px; }
+  25%  { left:40vw; top:0px; }
+  50%  { left:40vw; top:50vh; }
+  75%  { left:0px; top:50vh; }
+  100% { left:0px; top:0px; }
+}
+
+@keyframes dir1 {
+  0%   { left:0px; top:0px;}
+  25%  { left:40vw; top:0px;}
+  50%  { left:40vw; top:50vh;}
+  75%  { left:0px; top:50vh;}
+  100% { left:0px; top:0px;}
+}
+
+#prj1 {
+  -webkit-animation-name: dir1; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
+  animation-name: dir1;
+  animation-duration: 5s;
+  animation-direction: normal;    
+}
+
+@-webkit-keyframes dir2 {
+  0%   { left:0px; top:0px; }
+  25%  { left:-40vw; top:0px; }
+  50%  { left:-40vw; top:50vh; }
+  75%  { left:0px; top:50vh; }
+  100% { left:0px; top:0px; }
+}
+
+@keyframes dir2 {
+  0%   { left:0px; top:0px; }
+  25%  { left:-40vw; top:0px; }
+  50%  { left:-40vw; top:50vh; }
+  75%  { left:0px; top:50vh; }
+  100% { left:0px; top:0px; }
+}
+
+#prj2 {
+  -webkit-animation-name: dir2; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
+  animation-name: dir2;
+  animation-duration: 5s;
+  animation-direction: normal;
+}
+
+@-webkit-keyframes dir3 {
+  0%   { left:0px; top:0px; }
+  25%  { left:40vw; top:0px; }
+  50%  { left:40vw; top:-40vh; }
+  75%  { left:0px; top:-40vh; }
+  100% { left:0px; top:0px; }
+}
+
+@keyframes dir3 {
+  0%   { left:0px; top:0px;}
+  25%  { left:40vw; top:0px;}
+  50%  { left:40vw; top:-40vh;}
+  75%  { left:0px; top:-40vh;}
+  100% { left:0px; top:0px;}
+}
+
+#prj3 {
+  -webkit-animation-name: dir3; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
+  animation-name: dir3;
+  animation-duration: 5s;
+  animation-direction: normal;
+}
+
+@-webkit-keyframes dir4 {
+  0%   { left:0px; top:0px; }
+  25%  { left:-40vw; top:0px; }
+  50%  { left:-40vw; top:-40vh; }
+  75%  { left:0px; top:-40vh; }
+  100% { left:0px; top:0px; }
+}
+
+@keyframes dir4 {
+  0%   { left:0px; top:0px; }
+  25%  { left:-40vw; top:0px; }
+  50%  { left:-40vw; top:-40vh; }
+  75%  { left:0px; top:-40vh; }
+  100% { left:0px; top:0px; }
+}
+
+#prj4 {
+  -webkit-animation-name: dir4; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
+  animation-name: dir4;
+  animation-duration: 5s;
+  animation-direction: normal;
+}
+
+@-webkit-keyframes dir5 {
+  0%   { left:0px; top:0px; }
+  25%  { left:40vw; top:0px; }
+  50%  { left:40vw; top:-40vh; }
+  75%  { left:0px; top:-40vh; }
+  100% { left:0px; top:0px; }
+}
+
+@keyframes dir5 {
+  0%   { left:0px; top:0px; }
+  25%  { left:40vw; top:0px; }
+  50%  { left:40vw; top:-40vh; }
+  75%  { left:0px; top:-40vh; }
+  100% { left:0px; top:0px; }
+}
+
+#prj5 {
+  -webkit-animation-name: dir5; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
+  animation-name: dir5;
+  animation-duration: 5s;
+  animation-direction: normal;
+}
 
 /***** Contact Page *******/
 input[type=text] {
@@ -186,117 +310,4 @@ footer {
   padding-bottom: 7px;
   padding-top: 39px;
   border-top: 5px solid #4aaaa5;
-}
-
-/*** Responsive Web Design ***/
-
-/* * * * * * * * * * 980px * * * * * * * * * * */
-
-@media screen and (max-width: 980px) {
-  body {
-    margin-bottom: 20%;
-  }
-
-  /***** Header at top *******/
-  header h1 {
-    margin-left: 5%;
-  }
-
-  /* Nav link items */
-  nav {
-    margin-right: 5%;
-  }
-
-  /***** Middle Section *******/
-  section {
-    margin: 5% auto auto 5%;
-    width: 65%;
-  }
-}
-
-/* * * * * * * * * * 768px * * * * * * * * * * */
-
-@media screen and (max-width: 768px) {
-  body {
-    margin-bottom: 20%;
-  }
-
-  /***** Header at top *******/
-  header h1 {
-    margin-left: 2%;
-  }
-
-  /* Nav link items */
-  nav {
-    margin-right: 2%;
-  }
-
-  /***** Middle Section *******/
-  section {
-    margin: 5% 2% 3% 2%;
-    width: 95%;
-  }
-
-  /***** Portfolio Page *******/
-  .portfolio {
-    min-height: calc(100vh + 70px);
-  }
-  .portfolio-box {
-    width: 43%;
-  }
-}
-
-/* * * * * * * * * * 640px * * * * * * * * * * */
-@media screen and (max-width: 640px) {
-  body {
-    margin-bottom: 20%;
-  }
-
-  /***** Header at top *******/
-  header {
-    position: static;
-    margin: 0 0;
-  }
-
-  header h1 {
-    display: block;
-    width: 100%;
-    margin-left: 0%;
-  }
-
-  /* Nav link items */
-  nav {
-    float: none;
-    display: block;
-    left: 0px;
-    margin: 1% 33%;
-    padding: 0% 0%;
-  }
-
-  nav ul li {
-    padding: 10% 3%;
-  }
-
-  /***** Middle Section *******/
-  section {
-    margin: 7% 2% 3% 2%;
-    width: 95%;
-  }
-
-  aside img {
-    float: none;
-    display: block;
-    width: 90%;
-    height: auto;
-    margin: 0% 5%;
-  }
-
-  /***** Portfolio Page *******/
-  .portfolio {
-    min-height: calc(220vh);
-  }
-  .portfolio-box {
-    width: 72%;
-    margin: 3% 3% 3% 16%;
-  }
 }
